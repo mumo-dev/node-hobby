@@ -1,0 +1,15 @@
+
+[Unit]
+Description=Hobby Node JS service
+Documentation=https://example.com
+After=network.target
+
+[Service]
+Environment=NODE_PORT=3000
+Type=simple
+User=ubuntu
+ExecStart=/bin/bash startscript.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
